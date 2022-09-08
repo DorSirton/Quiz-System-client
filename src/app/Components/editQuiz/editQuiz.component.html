@@ -1,0 +1,178 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="mane">
+    <h1>Edit/Create Quiz : </h1>
+    <form>
+        <div>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    <label>Selected Institute Name</label>
+                </dt>
+                <dd class="col-sm-10">
+                    <h3>{{quizToEdit.Institue_Name}}</h3>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    <label>Selected Quiz Subject</label>
+                </dt>
+                <dd class="col-sm-10">
+                    <h3>{{quizToEdit.Quiz_Subject}}</h3>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    <label>Selected Language</label>
+                </dt>
+                <dd class="col-sm-10">
+                    <select [value]="''" class="Options">
+                        <option value="" selected disabled hidden> Please choose Language </option>
+                        <option>English</option>
+                        <option>Hebrew</option>
+                    </select>
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    <label>Quiz Name</label>
+                </dt>
+                <dd class="col-sm-10">
+                    <input class="inputName" type="text" [value]="quizToEdit.Name" name="name"
+                        [(ngModel)]="quizToEdit.Name" />
+                </dd>
+            </dl>
+            <dl class="row">
+                <dt class="col-sm-2">
+                    <label> Intrudaction : </label>
+                </dt>
+                <dd class="col-sm-10">
+                    <textarea name="intrudaction" id="" cols="30" rows="10" [(ngModel)]="quizToEdit.Intrudaction"
+                        [value]="quizToEdit.Intrudaction"></textarea>
+                </dd>
+            </dl>
+
+            <dl class="row">
+                <dt class="col-sm-2">
+                    <label>Passing Grade</label>
+                </dt>
+                <dd class="col-sm-10">
+                    <input [min]="20" type="number" name="passinggrade" [(ngModel)]="quizToEdit.Passing_Grade"
+                        [value]="quizToEdit.Passing_Grade" />
+                </dd>
+            </dl>
+
+            <div class="picker-radio">
+                <h3>
+                    Would you like to show the examinee what the correct answers are at the end of the
+                    exam?</h3>
+                <div class="form-check-inline">
+
+                    <label class="customradio"><span class="radiotextsty">Yes</span>
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="customradio"><span class="radiotextsty">No</span>
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+
+                </div>
+            </div>
+
+            <hr />
+            <div class="details-aftar">
+                <h1>Details After finishing the test : </h1>
+                <div>
+                    <label class="lable-after">Header :</label>
+                </div>
+                <div>
+                    <textarea [(ngModel)]="quizToEdit.Header" class="textarea-after" name="header" id="" cols="22"
+                        rows="7" [value]="quizToEdit.Header"></textarea>
+                </div>
+                <div>
+                    <label class="lable-after">Messeged If Passed : </label>
+                </div>
+                <div>
+                    <textarea [(ngModel)]="quizToEdit.Messege_If_Past" class="textarea-after" name="msg-pass" id=""
+                        cols="22" rows="7" [value]="quizToEdit.Messege_If_Past"></textarea>
+                </div>
+                <div>
+                    <label class="lable-after">Messeged If Failed : </label>
+                </div>
+                <div>
+                    <textarea [(ngModel)]=quizToEdit.Messege_If_Faild class="textarea-after" name="msg-fail" id=""
+                        cols="22" rows="7" [value]="quizToEdit.Messege_If_Faild"></textarea>
+                </div>
+            </div>
+            <hr />
+            <div>
+                <h1>Select Question : </h1>
+                <h3 class="question-h3">Select the Question That you want to include in your Quiz</h3>
+                <div class="container">
+                    <div class="row col-md-24 col-md-offset-0 custyle">
+                        <table class="table table-striped custab">
+                            <thead>
+                                <tr>
+                                    <td>Question Id</td>
+                                    <td>Question Content</td>
+                                </tr>
+                            </thead>
+                            <tr class="tablerow" *ngFor="let question of optionalQuestionList">
+                                <td>{{question.Id}}</td>
+                                <td>{{question.Content}}</td>
+                                <button (click)="AddQuestionToQuiz(question,quizToEdit)" [disabled]="question.Disabeld"
+                                    type="button" class="btn btn-info btn-circle btn-lg"><i
+                                        class="glyphicon glyphicon-ok"></i></button>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <h3 class="question-h3">The Question That Will Appered In the Quiz : </h3>
+                <div class="container">
+                    <div class="row col-md-24 col-md-offset-0 custyle">
+                        <table class="table table-striped custab">
+                            <thead>
+                                <tr>
+                                    <td>Question Id</td>
+                                    <td>Question Content</td>
+                                </tr>
+                            </thead>
+                            <ng-container *ngIf="quizId">
+                                <tr class="tablerow" *ngFor="let item of quizToEdit.Questions">
+                                    <td>{{item.Id}}</td>
+                                    <td>{{item.Content}}</td>
+                                    <button (click)="RemoveQuestionFromQuiz(item,quizToEdit)" type="button"
+                                        class="btn btn-warning btn-circle btn-lg"><i
+                                            class="glyphicon glyphicon-remove"></i></button>
+                                </tr>
+                            </ng-container>
+                            <ng-container *ngIf="!quizId">
+                                <tr class="tablerow" *ngFor="let item of questionOfTheQuizToCreate">
+                                    <td>{{item.Id}}</td>
+                                    <td>{{item.Content}}</td>
+                                    <button (click)="RemoveQuestionFromQuiz(item,quizToEdit)" type="button"
+                                        class="btn btn-warning btn-circle btn-lg"><i
+                                            class="glyphicon glyphicon-remove"></i></button>
+                                </tr>
+                            </ng-container>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        
+
+        </div>
+
+</form>
+<div class="buttons">
+    <button class="btn btn-warning" (click)="Back()">Back</button>
+    <button class="btn btn-danger">Show Demo</button>
+    <button class="btn btn-lg btn-info" (click)="Save()">Save</button>
+</div>
+</div>

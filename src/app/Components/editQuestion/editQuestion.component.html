@@ -1,0 +1,82 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+<div class="main">
+  <h1>Edit/Create Question : </h1>
+  <div class="content">
+    <div class="selectPicking">
+      <h3>Select Your Question Type : </h3>
+      <select class="Options"[(ngModel)]="selectedType">
+        <option value="single">Single Choice Answer</option>
+        <option value="multiple">Multiple Choice Answer</option>
+      </select>
+    </div>
+    <div class="questionContent">
+      <h3>Question Content : </h3>
+      <textarea [(ngModel)]="questionToEdit.Content" [defaultValue]="questionToEdit.Content"></textarea>
+      <h3>Question Suplamentary Text : </h3>
+      <textarea [(ngModel)]="questionToEdit.SuplementeryContent"
+        [defaultValue]="questionToEdit.SuplementeryContent"></textarea>
+    </div>
+  </div>
+  <div class="Content">
+    <h3>Question Answers : </h3>
+    <div class="btnAddAnswer">
+      <button id="addNew" class="btn btn-warning" (click)="AddAnswer()">Add New Answer</button>
+    </div>
+    <div class="container">
+      <div class="row col-md-24 col-md-offset-0 custyle">
+        <table class="table">
+          <thead>
+            <tr>
+              <td>Correct Answer?</td>
+              <td>Answer Id</td>
+              <td>Answer Content</td>
+              <td>Action</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="tablerow" *ngFor="let item of questionToEdit.Answers">
+              <td>
+                <svg *ngIf="item.IsCorrect" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                  fill="currentColor" class="bi bi-patch-check" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M10.354 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                  <path
+                    d="m10.273 2.513-.921-.944.715-.698.622.637.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636a2.89 2.89 0 0 1 4.134 0l-.715.698a1.89 1.89 0 0 0-2.704 0l-.92.944-1.32-.016a1.89 1.89 0 0 0-1.911 1.912l.016 1.318-.944.921a1.89 1.89 0 0 0 0 2.704l.944.92-.016 1.32a1.89 1.89 0 0 0 1.912 1.911l1.318-.016.921.944a1.89 1.89 0 0 0 2.704 0l.92-.944 1.32.016a1.89 1.89 0 0 0 1.911-1.912l-.016-1.318.944-.921a1.89 1.89 0 0 0 0-2.704l-.944-.92.016-1.32a1.89 1.89 0 0 0-1.912-1.911l-1.318.016z" />
+                </svg>
+              </td>
+              <td>
+                {{item.Id}}
+              </td>
+              <td>
+                <input type="text" [(ngModel)]="item.Content" [defaultValue]="item.Content" />
+              </td>
+              <td class="IsCorrect">
+                <button (click)="MarkAsCorrectAnswer(item)" class="bnt-setACorrect">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                  </svg>
+                  Set as correct
+                </button>
+                <button (click)="Delete(item.Id)" id="deleteAnswer" type="button" class="btn btn-warning btn-circle btn-lg"><i
+                    class="glyphicon glyphicon-remove"></i></button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-warning" (click)="Back()">Back</button>
+      <button class="btn btn-danger">Show Demo</button>
+      <button class="btn btn-lg btn-info" (click)="Save()">Save</button>
+  </div>
+
+  </div>
+</div>

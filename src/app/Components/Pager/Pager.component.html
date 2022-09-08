@@ -1,0 +1,13 @@
+
+    <div class="main">
+      <h3>you answered : <span>{{studentAnswersSelected.length}}</span> questions ,Out Of : <span>{{count}}</span> </h3>
+      <div class="question-details">
+        <button class="btn-arrow noselect" (click)="onPrve()">Previous Question</button>
+        <div class="pages" *ngFor="let item of range" (click)="onChangePage(item)">
+          <div class="btn-page" [ngClass]="{ 'active-page' : page === item}">{{item}}</div>
+          <div class="page-line">|</div>
+        </div>
+        <button class=" btn-arrow noselect" ngif (click)="onNext()">Next Question</button>
+      </div>
+      <button type="button" *ngIf="page === count" (click)="ShowFinishbutton()" class="finish-btn btn btn-primary">Finish Quize</button>
+    </div>

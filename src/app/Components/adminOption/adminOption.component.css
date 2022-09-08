@@ -1,0 +1,91 @@
+
+.Options{
+    margin-left: 50px;
+    width: 300px;
+    height: 50px;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+}
+option{
+    color: black;
+    font-weight: bold;
+}
+.selectPicking{
+    margin-top: 70px;
+}
+/* .selectPicking label{
+    margin: 30px;
+    font-weight: bold;
+    font-size: 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+.main{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.main h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.buttons{
+    margin: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.label{
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 900;
+    color: white;
+    z-index: 1;
+    margin: 30px;
+
+    
+}
+button{
+    width: 170px;
+    height: 50px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+h1 {
+    
+    position: relative;
+    font-size: 4em;
+    font-weight: 900;
+    color: white;
+    z-index: 1;
+    margin-bottom: 100px;
+}
+h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    font-size: 2em;
+    font-weight: 900;
+    color: #61d1e1;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+button{
+    margin: 10px;
+}
+.card{
+    width: 100%;
+    height: 700px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 30px 70px;
+    border-radius: 30px;
+}
+select{
+    border-radius: 20px;
+}

@@ -1,0 +1,71 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+  integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+<div class="main">
+  <div>
+    <div class="back">
+      <button class="btn btn-warning" (click)="GoToAdminPage()">Back</button>
+    </div>
+    <div class="container">
+      <h1>Availble Quizes For <span class="span">{{selectedInstitute}}</span> of Subjust : <span
+          class="span">{{selectedSubject}}</span></h1>
+      <br />
+      <div class="card-body row no-gutters align-items-center">
+        <i class="fas fa-search h4 text-body"></i>
+
+        <!--end of col-->
+        <div class="row search">
+          <input class="form-control form-control-lg form-control-border" type="search"
+            placeholder="Search topics or keywords sepperated by Commas">
+          <button class="search-btn" type="submit">Search</button>
+          <button (click)="CreateQuizPage()" class="create-button">Create New Quiz</button>
+        </div>
+      </div>
+    </div>
+    <!--end of col-->
+
+
+    <div class="container">
+      <div class="row col-md-24 col-md-offset-0 custyle">
+        <table class="table custab">
+          <thead>
+            <tr>
+              <th>Quiz Id</th>
+              <th>Quiz Link Code</th>
+              <th>Quiz Name</th>
+              <th>Number Of Questions</th>
+              <th>Last Update</th>
+              <th>Number Of Submitions</th>
+              <th class="text-center">Action</th>
+              <th>Is Active ?</th>
+            </tr>
+          </thead>
+          
+          <tr *ngFor="let item of newArrayAfterFilter">
+            <td>{{item.Id}}</td>
+            <td>{{item.Quiz_Code}}</td>
+            <td>{{item.Name}}</td>
+            <td>{{getNumberOfQuestions(item)}}</td>
+            <td>{{item.Last_Updated}}</td>
+            <td>{{getNumberOfSubmitions(item)}}</td>
+            <td class="text-center">
+              <button (click)="GoToEditQuizPage(item)" *ngIf="!item.IsActive" class='edit-btn'> Edit</button>
+              <button *ngIf="!item.IsActive" (click)="DeleteAlert(item)" type="button" class="delete-btn"><i
+                  class="glyphicon glyphicon-trash"></i>Delete</button>
+            </td>
+            <td>
+              <a *ngIf="item.IsActive" class='btnActive btn-info btn-xs' href="#"><span
+                  class="	glyphicon glyphicon-ok"></span> Active</a>
+              <a *ngIf="!item.IsActive" class='btnUnActive btn-info btn-xs' href="#"><span
+                  class="glyphicon glyphicon-remove"></span>
+                Un-Active</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  

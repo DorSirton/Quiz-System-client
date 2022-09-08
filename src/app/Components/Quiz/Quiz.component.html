@@ -1,0 +1,17 @@
+<div class="quiz-header">
+    <h2>Quiz - {{quiz.Name}} </h2>
+</div>
+
+<div class="container-body">
+    <div class="content h-100">
+        <app-quizQuestion *ngIf="currentQuestion" [index]="currentPage" [question]="currentQuestion"
+            [answers]="answers" (selectAnswer)="onSelectedAnswer($event)">
+        </app-quizQuestion>
+    </div>
+</div>
+
+<div class="footer">
+    <app-Pager *ngIf="currentPage" [count]="questionsCount" [studentAnswersSelected]="studentAnswersSelected" [page]="currentPage" (changePage)="onChangeQuestion($event)"
+        (next)="onNext()" (prve)="onPrve()" (finishQuiz)="GoToFinishQuiz()">
+    </app-Pager>
+</div>

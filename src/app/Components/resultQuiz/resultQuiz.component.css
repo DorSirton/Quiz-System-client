@@ -1,0 +1,96 @@
+.quiz-header {
+    height: 100px;
+    color: rgb(246, 246, 246);
+    background-color: #61d1e1;
+    padding: 20px 50px;
+}
+h1{
+        font-weight: 900;
+        position: relative;
+        font-size: 2em;
+        color: black;
+        z-index: 1;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.title{
+    font-weight: 900;
+    position: relative;
+    font-size: 2em;
+    color: black;
+    z-index: 1;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.from-result {
+    position: absolute;
+    border-radius: 40px;
+    padding: 40px 200px;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 67%;
+    box-sizing: border-box;
+    background: #d6c9c9;
+    margin: 10px 0 50px 0;
+    text-align: left;
+}
+
+.field {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.btn {
+    font-size: 20px;
+    text-align: center;
+    border-radius: 40px;
+    height: 25x;
+    margin-top: 250px;
+
+}
+
+
+.result-content {
+    padding: 20px 50px;
+}
+
+
+.result-content .title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.result-content .record {
+    border-bottom: 1px solid #d6c9c9;
+    padding: 10px 0px;
+    width: 60%;
+    display: flex;
+    font-size: 16x;
+}
+
+.result-content .record:last-child {
+    border-bottom: none;
+}
+
+.result-content .record .label {
+    width: 30%;
+    font-weight: 600;
+}
+
+.result-content .record .value {
+    width: 70%;
+}
+
+.passed {
+    color: rgb(80, 180, 80);
+}
+
+.failed {
+    color: rgb(214, 70, 70);
+}
+
+.bold {
+    font-weight: 600;
+}

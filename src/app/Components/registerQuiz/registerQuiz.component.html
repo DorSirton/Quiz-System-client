@@ -1,0 +1,120 @@
+<!--<div class="header">
+  <h1>Quiz Preview </h1>
+</div>
+
+<div class="container">
+  <form class="from-register">
+
+    <div class="row">
+      <h2 class="title">Quiz Register</h2>
+      <p class="small-title">Please fill in your information To Start Quiz</p>
+    </div>
+
+    <div class="row  align-items-center field-box w-100">
+      <div class="col-auto" style="width:30%">
+        <label class="col-form-label">First Name</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" class="form-control" placeholder="Enter Your First Name..." />
+      </div>
+    </div>
+
+
+    <div class="row  align-items-center field-box w-100">
+      <div class="col-auto" style="width:30%">
+        <label class="col-form-label">Last Name</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" class="form-control" placeholder="Enter Your Last Name..." />
+      </div>
+    </div>
+
+
+    <div class="row   align-items-center field-box w-100">
+      <div class="col-auto" style="width:30%">
+        <label class="col-form-label">Email address</label>
+      </div>
+      <div class="col-auto">
+        <input type="email" class="form-control" placeholder="Enter Your email..." />
+      </div>
+    </div>
+
+    <div class="row  align-items-center field-box w-100">
+      <div class="col-auto" style="width:30%">
+        <label class="col-form-label">Phone Number</label>
+      </div>
+      <div class="col-auto">
+        <input type="tel" class="form-control" placeholder="Enter Your Phone number..." />
+      </div>
+    </div>
+
+    <div class="row   align-items-center field-box w-100">
+      <div class="col-auto" style="width:30%">
+        <label class="col-form-label">ID Quiz</label>
+      </div>
+      <div class="col-auto">
+        <input type="number" class="form-control" placeholder="Enter Your ID Quiz..." />
+      </div>
+    </div>
+
+    <div class="row">
+      <button type="button" class="btn btn-primary" (click)="GoToPreviewQuiz()">Submit</button>
+    </div>
+
+
+  </form>
+</div>-->
+
+
+
+<div class="page">
+  <div class="page-header">
+    <h1>Register Quiz</h1>
+  </div>
+  <div class="page-content">
+    <div class="quiz-reguster">
+        <h1>Please fill your information To Start Quiz</h1>
+      <div class="row field-box ">
+        <div class="col-auto" style="width:20%">
+          <label class="col-form-label">First Name</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="firstName" [(ngModel)]="firstName" class="form-control"
+            placeholder="Enter Your First Name..." />
+        </div>
+      </div>
+      <div class="row  field-box ">
+        <div class="col-auto" style="width:20%">
+          <label class="col-form-label">Last Name</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="lastName" [(ngModel)]="lastName" class="form-control"
+            placeholder="Enter Your Last Name..." />
+        </div>
+      </div>
+
+
+      <div class="row   field-box ">
+        <div class="col-auto" style="width:20%">
+          <label class="col-form-label">Email address</label>
+        </div>
+        <div class="col-auto">
+          <input type="email" name="email" [(ngModel)]="email" class="form-control" placeholder="Enter Your email..." />
+        </div>
+      </div>
+
+      <div class="row  field-box">
+        <div class="col-auto" style="width:20%">
+          <label class="col-form-label">Phone </label>
+        </div>
+        <div class="col-auto">
+          <input type="text" name="phone" [(ngModel)]="phone" class="form-control" placeholder="Enter Your Phone..." />
+        </div>
+      </div>
+      <div>
+        <button type="button" class="btn btn-primary" (click)="GoToRegisterQuizeCode()">Submit</button>
+      </div>
+    </div>
+  </div>
+
+</div>

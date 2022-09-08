@@ -1,0 +1,44 @@
+.report-quiz {
+    background-color: gainsboro;
+    padding: 30px 50px;
+}
+
+.Summary-box{
+    display: inline-flex;
+}
+
+.box-right{
+    margin-left: 10px;
+}
+
+.box-left{
+    margin-left: 100px;
+}
+
+.label{
+    font-size: 16px;
+    font-weight: 600;
+    /* margin: 15px; */
+    width: 200%;
+}
+
+
+.header{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+}
+
+.header2{
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.header-table{
+    background-color: rgb(223, 132, 57);
+}
+

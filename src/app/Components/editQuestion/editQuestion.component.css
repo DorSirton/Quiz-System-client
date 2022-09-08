@@ -1,0 +1,125 @@
+.main {
+    background-color: black;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.content {
+    background-color: #858585;
+    border-radius: 20px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    display: inline-block;
+    width: 50%;
+}
+
+
+select {
+    border-radius: 20px;
+}
+
+
+.questionContent textarea {
+    display: inline-block;
+    height: 200px;
+    width: 70%;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.Options {
+    width: 300px;
+    height: 50px;
+}
+#addNew{
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.btnAddAnswer{
+    display: inline-block;
+    margin-top: 40px;
+}
+.content h3,
+.Content h3 {
+    margin-top: 50px;
+    position: relative;
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #61d1e1;
+    z-index: 1;
+    margin-bottom: 30px
+}
+.IsCorrect svg{
+color: green;
+}
+
+.main h1 {
+    margin-top: 50px;
+    font-size: 4em;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.answers {
+    margin-top: 100px;
+    background-color: black;
+    border-radius: 20px;
+}
+
+table {
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 16px;
+}
+
+input{
+    color: black;
+}
+svg{
+   width: 30px;
+   height: 30px;
+}
+#deleteAnswer{
+    margin-left: 25px;
+}
+.bnt-setACorrect{
+    background-color: #858585;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.buttons{
+    margin: 100px;
+    display: flex;
+    justify-content: space-between;
+  
+}
+.buttons button{
+    width: 170px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+thead{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+}

@@ -1,0 +1,96 @@
+<div class="report-quiz h-100 w-100">
+
+  <h2>Quiz Report : {{quiz.Name}} | {{quiz.Institue_Name}} | {{quiz.Quiz_Subject}} </h2>
+
+  <div class="header">Summary</div>
+
+  <div class="Summary-box">
+    <div class="box-right">
+
+      <div>
+        <label> Quiz Name :</label>
+        {{quiz.Name}}
+      </div>
+
+      <div>
+        <label> Quiz Code :</label>
+        {{quiz.Quiz_Code}}
+      </div>
+
+      <div>
+        <label> Quiz Id :</label>
+        {{quiz.Id}}
+      </div>
+
+      <div>
+        <label> Number Of Questions :</label>
+        {{quiz.Questions.length}}
+      </div>
+
+      <div>
+        <label> Passing Grade :</label>
+        {{quiz.Passing_Grade}}
+      </div>
+
+    </div>
+
+    <div class="box-left">
+
+      <div>
+        <label> Date Range :</label>
+        {{from}} - {{to}}
+      </div>
+      <div>
+        <label> Number Of Submissions :</label>
+        {{reports.length}}
+      </div>
+
+      <div>
+        <label> Number Of Respondents passed :</label>
+        {{numberOfRespondentsPassed}}
+      </div>
+
+      <div>
+        <label>Passing Percentage :</label>
+        {{( numberOfRespondentsPassed /reports.length) * 100 }}%
+      </div>
+
+      <div>
+        <label>Paverage Grade :</label>
+        {{avgGrade}}
+      </div>
+
+    </div>
+  </div>
+
+  <div class="header2"> Respondent Grades And Answers</div>
+  <div>Click a name from list to see the respondents test <button class="btn btn-primary">
+      Show Qustions
+    </button></div>
+  <div class="">
+    <table class="table table-striped">
+      <thead>
+        <tr class="header-table">
+          <th scope="col">ID</th>
+          <th scope="col">Respondent</th>
+          <th scope="col">Submitted</th>
+          <th scope="col">Number Of Questions Answered</th>
+          <th scope="col">Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of reports">
+          <th scope="row">1</th>
+          <td>{{item.student.First_Name + item.student.Last_Name}}</td>
+          <td>{{item.submittedDate}}</td>
+          <td>{{item.totalQuestions}}</td>
+          <td>{{item.grade}}</td>
+
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>

@@ -1,0 +1,26 @@
+.report-question-quiz {
+    background-color: gainsboro;
+    padding: 30px 50px;
+}
+
+.header-table{
+    background-color: rgb(223, 132, 57);
+}
+.header{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+}
+
+.text{
+    margin-bottom: 30px;
+    
+}
+
+.btns{
+    margin: 20px 0px;
+    justify-content: space-between;
+    
+}

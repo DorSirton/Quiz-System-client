@@ -1,0 +1,51 @@
+.report-query {
+    background-color: gainsboro;
+    padding: 30px 50px;
+}
+
+.box {
+    width: 60%;
+}
+
+.box-group {
+    margin: 20px 0px;
+    display: flex;
+}
+
+.btns {
+    margin: 20px 0px;
+    justify-content: space-between;
+}
+
+.box-group>.label {
+    font-size: 16px;
+    font-weight: 600;
+    /* margin: 15px; */
+    width: 30%;
+}
+
+.box-group .input {
+    /* margin: 15px; */
+    width: 70%;
+    justify-content: space-between;
+}
+
+.box-group .input select {
+    border-radius: 2px;
+    width: 100%;
+}
+
+.input,
+.range-group {
+    display: flex;
+}
+
+.range-group>div {
+    /* margin: 0px 10px; */
+    font-size: 16px;
+    /* padding-right: 10px; */
+}
+
+.range-group .datapicker {
+    margin-left: 10px;
+}

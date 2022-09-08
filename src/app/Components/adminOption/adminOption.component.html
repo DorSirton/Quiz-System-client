@@ -1,0 +1,33 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+  integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+<div class="main">
+  <div class="card">
+    <div class="main">
+      <h1>Lets Start Manage Your Quizes...</h1>
+      <h3>Please Select Your Current Institute And Quiz Subject</h3>
+      <div class="selectPicking">
+        <h3>Select Your Institute</h3>
+        <select [value]="''" class="Options"  [(ngModel)]="selectedInstitute" >
+          <option value="" selected disabled hidden> Please choose institute </option>
+          <option  *ngFor="let item of institutesOptions"  [value]="item.Name">{{item.Name}}</option>
+        </select>
+      </div>
+      <div class="selectPicking">
+        <h3>Select Your Quiz Subject</h3>
+        <select class="Options" [(ngModel)]="selectedSubject">
+          <option value="" selected disabled hidden> Please choose Subject </option>
+          <option *ngFor="let item of quizSubjects" [value]="item.Name">{{item.Name}}</option>
+        </select>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-primary" (click)="GoToManageQuizesPage()" [disabled]="this.selectedInstitute === '' || this.selectedSubject === ''">Manage Quizes</button>
+        <button class="btn btn-danger" (click)="GoToReportsPage()" [disabled]="this.selectedInstitute === '' || this.selectedSubject === ''">Reports</button>
+        <button class="btn btn-info" (click)="GoToManageQuestionPage()">Manage Questions</button>
+      </div>
+    </div>
+  </div>
+</div>

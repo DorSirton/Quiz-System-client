@@ -1,0 +1,42 @@
+.question-content-box {
+    display: flex;
+    align-content: space-between;
+    height: 30%;
+}
+
+.question-content {
+    outline-style: ridge;
+    width: 100%;
+    text-align: left;
+    padding: 15px 2rem;
+}
+
+.question-image {
+    background-color: yellow;
+    width: 50%;
+}
+
+.label {
+    /* margin-top: 40px; */
+    display: flex;
+}
+.main{
+    margin-bottom: 50px;
+}
+
+
+.question-btn {
+    justify-content: space-between;
+    padding: 0px 2rem;
+    display: flex;
+}
+
+.text-answer {
+    font-size: 14px;
+    padding: 0px 10px;
+    padding-left: 0px;
+}
+
+ul {
+    padding-top: 1em;
+}

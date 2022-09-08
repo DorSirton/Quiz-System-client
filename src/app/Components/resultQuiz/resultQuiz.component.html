@@ -1,0 +1,70 @@
+<div class="h-100 w-100">
+  <div class="quiz-header">
+    <h1>{{quizResult?.quizName}}</h1>
+  </div>
+
+  <div class="result-content">
+
+    <div class="title">
+      {{quizResult?.quizName}} - Results
+    </div>
+
+    <div class="record">
+      <div class="label">Your Grade:</div>
+      <div class="value bold" [ngClass]="quizResult?.passed ? 'passed' : 'failed'"> {{quizResult?.grade}} </div>
+    </div>
+    <div class="record">
+      <div class="label">Status:</div>
+      <div class="value bold">
+        <div *ngIf="quizResult?.passed" class="passed">Passed</div>
+        <div *ngIf="!quizResult?.passed" class="failed">Failed</div>
+      </div>
+    </div>
+    <div class="record">
+      <div class="label">Summery:</div>
+      <div class="value">You answered {{quizResult?.correntStudentAnswer}} questions correctly, out of
+        {{quizResult?.totalQuestions}} questions in total.</div>
+    </div>
+    <div class="record">
+      <div class="label">Passing Grade:</div>
+      <div class="value">{{quizResult?.passingGrade}}</div>
+    </div>
+
+  </div>
+
+  <!-- <div class="container">
+    <form class="from-result">
+
+      <div class="row">
+        <h2 class="title">Name Quiz</h2>
+        <h6 class="small-title">Thank you, for approached ______ Quiz Name, in the subjects __________ Quiz Subject</h6>
+      </div>
+
+      <div class="row  align-items-center field-box w-100">
+        <div class="col-auto" style="width:30%">
+          <label class="col-form-label">Your Grade :</label>
+        </div>
+
+      </div>
+
+      <div class="row  align-items-center field-box w-100">
+        <div class="col-auto" style="width:30%">
+          <label class="col-form-label">Status : Pass/Unpass</label>
+        </div>
+
+      </div>
+
+      <div class="row   align-items-center field-box w-100">
+        <div class="col-auto" style="width:30%">
+          <label class="col-form-label">Summary :</label>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <button type="button" class="btn btn-primary">Send Details To Email</button>
+      </div>
+
+    </form>
+  </div> -->
+</div>

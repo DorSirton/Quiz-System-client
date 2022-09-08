@@ -1,0 +1,73 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+  integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+<div class="main">
+  <div>
+    <div class="back">
+      <button (click)="GoToAdminPage()" class="btn btn-warning">Back</button>
+    </div>
+    <div class="container">
+      <h1>Question Collection : <span></span></h1>
+      <br />
+      <div class="card-body row no-gutters align-items-center">
+        <i class="fas fa-search h4 text-body"></i>
+
+        <!--end of col-->
+        <div class="row search">
+          <input class="form-control form-control-lg form-control-border" type="search"
+            placeholder="Search topics or keywords sepperated by Commas">
+          <button class="search-btn" type="submit">Search</button>
+          <button class="create-button">Create New Question</button>
+        </div>
+      </div>
+    </div>
+    <!--end of col-->
+
+
+    <div class="container">
+      <div class="row col-md-24 col-md-offset-0 custyle">
+        <table class="table custab">
+          <thead>
+            <tr>
+              <th>Qestion Id</th>
+              <th>Content</th>
+              <th>Last Updated</th>
+              <th>Question Type</th>
+              <th>Number Of Quizes Uses</th>
+              <th></th>
+            </tr>
+          </thead>
+          
+          <tr *ngFor="let item of questions">
+            <td>{{item.Id}}</td>
+            <td>{{item.Content}}</td>
+            <td>{{item.Last_Updated}}</td>
+            <td *ngIf="!CheckTypeSingle(item)">Multiple Choice Question</td>
+            <td *ngIf="CheckTypeSingle(item)">Single Choice Question</td>
+            <td>{{GetNumberOfQuizes(item)}}</td>
+            <td class="text-center">
+              <button (click)="GoToEditQuestionPage(item)" class='edit-btn'> Edit</button>
+              <button (click)="DeleteAlert(item)" type="button" class="delete-btn"><i
+                  class="glyphicon glyphicon-trash"></i>Delete</button>
+            </td>
+            
+            <!-- <td>
+              <a  class='btnActive btn-info btn-xs' href="#"><span
+                  class="	glyphicon glyphicon-ok"></span> Active</a>
+              <a  class='btnUnActive btn-info btn-xs' href="#"><span
+                  class="glyphicon glyphicon-remove"></span>
+                Un-Active</a>
+            </td> -->
+          <!-- </tr>
+          
+        </table>
+        <mat-paginator class="paginator" [length]="20" [pageSize]="3" [pageSizeOptions]="[3,5,10]" aria-label="Select page">
+        </mat-paginator>
+      </div>
+    </div>
+  </div> ---->
+  
+<!-- <app-answersTable></app-answersTable> -->

@@ -1,0 +1,18 @@
+<div>
+
+  <div class="w-100 question-content-box">
+    <div class="question-content">
+      <h1 class="h">Question #{{index}}</h1>
+      <div> {{question?.Content}}</div>
+    </div>
+  </div>
+
+  <ul *ngFor="let item of answers; let i = index ">
+      <label class="label" (click)="onSelectedAnswer(item.Id)">
+        <div class="text-answer"> {{i +1}} ) {{item.Content}}</div>
+        <input [value]="item.Id" [checked]="item.Checked" type="radio">
+        <span class="checkmark"></span>
+      </label>
+    </ul>
+
+</div>

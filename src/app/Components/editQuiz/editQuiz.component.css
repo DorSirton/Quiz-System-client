@@ -1,0 +1,262 @@
+h1 {
+    position: relative;
+    font-size: 4em;
+    font-weight: 900;
+    color: white;
+    z-index: 1;
+    margin-bottom: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 40px;
+}
+.headline-h1 h1{
+  margin: 100px;
+
+}
+.tablerow{
+height: 70px;
+}
+tr{
+  text-align: center;
+}
+input,textarea{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px #61d1e1, 0px 0px 30px #858585;
+}
+.inputName{
+  width: 50%;
+}
+.headline-h1{
+  text-align: center;
+}
+table{
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.lable-after{
+    position: relative;
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #61d1e1;
+    z-index: 1;
+    margin-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.textarea-after{
+    position: relative;
+    font-size: 1.4em;
+    font-weight: 900;
+    color: rgba(0,0,0,0.7);
+    z-index: 1;
+    margin-bottom: 20px
+}
+.go-collect{
+    align-items:center;
+}
+
+th{
+    font-size:20px;
+}
+
+.mane {
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    border-radius: 10px;
+    min-height: 100vh;
+    border: 20px;
+    
+}
+.details-aftar{
+    text-align: center;
+}
+.mane .row dt{
+    margin-bottom: 20px;
+}
+.custab {
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5% 0;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+}
+
+.custab:hover {
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+}
+textarea{
+    width: 70%;
+    margin-bottom: 15px;
+}
+.questions{
+    height:300px;
+}
+.form-check-inline label{
+   font-size: 16px;
+   margin: 10px;
+}
+.row label{
+    position: relative;
+    font-size: 1.4em;
+    font-weight: 900;
+    color: #61d1e1;
+    z-index: 1;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.row h3,.row input, .row textarea{
+    position: relative;
+    font-size: 1.8em;
+    font-weight: 900;
+    color: rgba(0,0,0,0.7);
+    z-index: 1;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.questions h1{
+    font-size: 4em;
+    font-weight: 900;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.question-h3{
+  font-size: 2em;
+    font-weight: 900;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.picker-radio{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 15%;
+    background-color: white;
+    width: 70%;
+    height:150px;
+    border-width: 15px;
+    box-shadow: 0px 0px 30px #61d1e1, 0px 0px 30px #858585;
+
+}
+
+.picker-radio h3{
+    margin: 20px;
+    position: relative;
+    font-size: 1.4em;
+    font-weight: 900;
+    color: rgba(0,0,0,0.7);
+    z-index: 1;
+}
+.radiotextsty {
+    color: rgba(0,0,0,0.7);
+    font-size: 18px;
+  }
+  option{
+    color: black;
+    font-weight: bold;
+}
+.Options{
+  width: 300px;
+  height: 50px;
+  border-radius: 20px;
+  color:rgba(0,0,0,0.7);
+  font-size: 18px;
+  font-weight: bold;
+}
+  
+  .customradio {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .customradio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 22px;
+    width: 22px;
+    background-color: white;
+    border-radius: 50%;
+    border:1px solid #BEBEBE;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .customradio:hover input ~ .checkmark {
+    background-color: transparent;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .customradio input:checked ~ .checkmark {
+    background-color: white;
+    border:1px solid #BEBEBE;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .customradio input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .customradio .checkmark:after {
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #61d1e1;
+  }
+  .btn-circle {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+.disabled{
+  color: red;
+}
+.buttons{
+  margin: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+button{
+  margin: 10px;
+  width: 120px;
+  height: 50px;
+  color: white;
+  font-size: 18px;
+  font-weight:500;
+} 
